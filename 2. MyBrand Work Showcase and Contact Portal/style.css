@@ -312,7 +312,7 @@ h2{
   gap: 2rem;
 }
 
-.service-card {
+.service-card,.testimonial-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -343,4 +343,51 @@ h2{
 .service-card p {
   color: var(--subtle-text);
   font-size: 1rem;
+}
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1.5rem;
+}
+.testimonial-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.testimonial-card img{
+ width: 80px;
+ height: 80px;
+ border-radius: 50%;
+ object-fit: cover;
+ margin-bottom: 1.5rem;
+}
+
+.testimonial-card p{
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--subtle-text);
+    margin-bottom: 2rem;
+}
+
+
+.testimonial-card h4 {
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-card span {
+  color: var(--accent-color);
+  font-size: 0.9rem;
 }
